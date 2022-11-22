@@ -22,7 +22,11 @@ kotlin {
     }
     
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+            dependencies {
+                implementation("org.jetbrains.skiko:skiko:0.7.41")
+            }
+        }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
